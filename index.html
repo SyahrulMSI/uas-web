@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>UAS TEORI WEB_201951226</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="./img/male-profile.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Muhammad Syahrul Imron
+          </a>
+        </div>
+      </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row d-flex justify-content-center">
+                    <div class="card mt-5 m-5 col-lg-8">
+                        <div class="card-body">
+                            <form action="#">
+                                <div class="row d-flex justify-content-center">
+                                    <div class="col-lg-9">
+                                        <table style="width: 100%;">
+                                            <tr>
+                                                <td>
+                                                    <label for="">NIM</label>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="nim" class="form-control mb-3">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="">NAMA MAHASISWA</label>
+                                                </td>
+                                                <td>
+                                                    <input type="text" name="nama" class="form-control mb-3">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="">JENIS KELAMIN</label>
+                                                </td>
+                                                <td>
+                                                    <input type="radio" name="jekel" class="mb-3"> Laki-laki 
+                                                    <input type="radio" name="jekel" class="mb-3 ms-5"> Perempuan 
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="">HOBBY</label>
+                                                </td>
+                                                <td>
+                                                    <input type="checkbox" name="hobi" class="mb-3"> Menulis
+                                                    <input type="checkbox" name="hobi" class="mb-3 ms-4"> Membaca
+                                                    <input type="checkbox" name="hobi" class="mb-3 ms-4"> Menyanyi
+                                                    <input type="checkbox" name="hobi" class="mb-3 ms-4"> Progamming
+                                                    <input type="checkbox" name="hobi" class="mb-3 ms-4"> Desainer
+                                                    <input type="checkbox" name="hobi" class="mb-3 ms-4"> Pembalap
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="">PROGRAM STUDI</label>
+                                                </td>
+                                                <td>
+                                                   <select name="progdi" class="form-control mb-3" id="">
+                                                       <option selected disabled>-- PILIH PROGRAM STUDI --</option>
+                                                       <option value="">Sistem Informasi</option>
+                                                       <option value="">Teknik Informatika</option>
+                                                       <option value="">Teknik Elektro</option>
+                                                       <option value="">Teknik Industri</option>
+                                                   </select>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="">PHOTO</label>
+                                                </td>
+                                                <td>
+                                                    <img id="box" " class="img-thumbnail mb-3" style="width: 50%"/>
+                                                    <input id="input" type="file" name="poto" class="form-control mb-3">
+                                                </td>
+                                            </tr>
+                                            
+                                        </table>
+                                        
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group float-end">
+                                            <button class="btn btn-success mb-3">SIMPAN</button>
+                                        <br>
+                                            <button class="btn btn-success mb-3">KELUAR</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="`./js/bootstrap.min.js"></script>
+<script>
+    inputBox = document.getElementById("input"); // Mengambil elemen tempat Input gambar
+
+inputBox.addEventListener('change',function(input){ // Jika tempat Input Gambar berubah
+
+ var box = document.getElementById("box"); // mengambil elemen box
+ var img = input.target.files; // mengambil gambar
+
+ var reader = new FileReader(); // memanggil pembaca file/gambar
+ reader.onload = function(e){ // ketika sudah ada
+  box.setAttribute('src',e.target.result); // membuat alamat gambar
+ }
+ reader.readAsDataURL(img[0]); // menampilkan gambar
+}
+);  
+</script>
+</body>
+</html>
